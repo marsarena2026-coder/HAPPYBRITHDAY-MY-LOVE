@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Rima Islam ❤️</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+      background: radial-gradient(circle at top, #ffdde8, #ffe9f2, #ffd1dc, #17001f);
+    }
+    .font-love { font-family: 'Pacifico', cursive; }
+
+    .heart {
+      position: fixed;
+      bottom: -40px;
+      color: rgba(255, 70, 130, 0.8);
+      animation: floatHeart linear infinite;
+      z-index: 1;
+      pointer-events: none;
+    }
+    @keyframes floatHeart {
+      0% { transform: translateY(0) rotate(0deg) scale(1); opacity: 0; }
+      15% { opacity: 1; }
+      100% { transform: translateY(-115vh) rotate(360deg) scale(1.8); opacity: 0; }
+    }
+
+    .sparkle {
+      position: fixed;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: white;
+      box-shadow: 0 0 15px white;
+      animation: sparkle 2s infinite ease-in-out;
+      z-index: 2;
+      pointer-events: none;
+    }
+    @keyframes sparkle {
+      0%, 100% { transform: scale(0); opacity: 0; }
+      50% { transform: scale(1.3); opacity: 1; }
+    }
+
+    .step {
+      display: none;
+      animation: popIn .8s ease forwards;
+    }
+    .step.active { display: block; }
+    @keyframes popIn {
+      from { opacity: 0; transform: translateY(35px) scale(.95); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.22);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      box-shadow: 0 25px 60px rgba(121, 0, 65, 0.28);
+    }
+
+    .gift-box {
+      width: 150px;
+      height: 115px;
+      background: linear-gradient(135deg, #ff3f8f, #ff8fb8);
+      border-radius: 18px;
+      position: relative;
+      margin: 0 auto;
+      animation: bounceGift 1.5s infinite;
+      cursor: pointer;
+      box-shadow: 0 20px 45px rgba(255, 45, 130, .45);
+    }
+    .gift-box::before {
+      content: '';
+      position: absolute;
+      width: 28px;
+      height: 115px;
+      background: #fff4b8;
+      left: 61px;
+      top: 0;
+    }
+    .gift-box::after {
+      content: '';
+      position: absolute;
+      width: 170px;
+      height: 28px;
+      background: #fff4b8;
+      left: -10px;
+      top: 42px;
+    }
+    .gift-lid {
+      width: 175px;
+      height: 38px;
+      background: linear-gradient(135deg, #ff1f7a, #ff72aa);
+      border-radius: 16px;
+      position: absolute;
+      top: -35px;
+      left: -12px;
+      transition: .5s ease;
+    }
+    .gift-box.open .gift-lid {
+      transform: rotate(-25deg) translate(-35px, -45px);
+    }
+    @keyframes bounceGift {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    .balloon {
+      position: absolute;
+      width: 60px;
+      height: 78px;
+      border-radius: 50% 50% 45% 45%;
+      animation: balloonFloat 4s ease-in-out infinite;
+      z-index: 0;
+    }
+    .balloon::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 90px;
+      background: rgba(255,255,255,.6);
+      left: 50%;
+      top: 76px;
+    }
+    @keyframes balloonFloat {
+      0%,100% { transform: translateY(0) rotate(-3deg); }
+      50% { transform: translateY(-28px) rotate(4deg); }
+    }
+
+    .cake {
+      position: relative;
+      width: 210px;
+      height: 135px;
+      margin: 0 auto;
+    }
+    .cake-base {
+      position: absolute;
+      bottom: 0;
+      width: 210px;
+      height: 85px;
+      background: linear-gradient(180deg, #ff78ad, #ff2f86);
+      border-radius: 18px 18px 28px 28px;
+      box-shadow: 0 18px 35px rgba(255, 47, 134, .38);
+    }
+    .cake-top {
+      position: absolute;
+      bottom: 70px;
+      width: 210px;
+      height: 40px;
+      background: #fff7fb;
+      border-radius: 50%;
+    }
+    .candle {
+      position: absolute;
+      bottom: 105px;
+      left: 96px;
+      width: 18px;
+      height: 45px;
+      background: repeating-linear-gradient(45deg, #fff, #fff 6px, #ff4d94 6px, #ff4d94 12px);
+      border-radius: 8px;
+    }
+    .flame {
+      position: absolute;
+      bottom: 146px;
+      left: 95px;
+      width: 20px;
+      height: 30px;
+      background: radial-gradient(circle, #fff7a1 20%, #ffb300 60%, #ff4d00 100%);
+      border-radius: 50% 50% 50% 50%;
+      animation: flame .25s infinite alternate;
+      transform-origin: bottom;
+    }
+    @keyframes flame {
+      from { transform: scale(1) rotate(-3deg); }
+      to { transform: scale(1.15) rotate(3deg); }
+    }
+
+    .note-card {
+      background: rgba(255,255,255,.35);
+      border: 1px solid rgba(255,255,255,.55);
+      border-radius: 1.25rem;
+      padding: 1rem 1.25rem;
+      text-align: left;
+      cursor: pointer;
+      transition: transform .25s, background .25s;
+      animation: popIn .6s ease both;
+    }
+    .note-card:hover { transform: translateY(-3px); background: rgba(255,255,255,.5); }
+    .note-card .note-title { font-weight: 700; color: #c2185b; display: flex; justify-content: space-between; align-items: center; }
+    .note-card .note-body { display: none; margin-top: .6rem; line-height: 1.7; font-size: .98rem; color: rgba(0,0,0,.88); }
+    .note-card.open .note-body { display: block; }
+    .note-card.open .note-chevron { transform: rotate(180deg); }
+    .note-chevron { transition: transform .25s; }
+    .notes-scroll { max-height: 340px; overflow-y: auto; padding-right: 4px; }
+
+    .confetti {
+      position: fixed;
+      top: -20px;
+      width: 10px;
+      height: 16px;
+      animation: confettiFall 3s linear forwards;
+      z-index: 40;
+    }
+    @keyframes confettiFall {
+      to { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center px-4 text-black relative">
+  <div class="balloon bg-pink-400 left-8 top-20"></div>
+  <div class="balloon bg-purple-400 right-10 top-28" style="animation-delay:1s"></div>
+  <div class="balloon bg-yellow-300 left-1/4 bottom-16" style="animation-delay:2s"></div>
+  <div class="balloon bg-red-400 right-1/4 bottom-20" style="animation-delay:.5s"></div>
+
+  <main class="relative z-10 w-full max-w-3xl">
+    <div class="glass rounded-[2rem] p-6 sm:p-10 text-center min-h-[560px] flex items-center justify-center">
+      
+      <!-- STEP 0 -->
+      <section class="step active w-full" data-step="0">
+        <p class="uppercase tracking-[.35em] text-sm text-black mb-4">A surprise for my whole world, Rima Islam</p>
+        <h1 class="font-love text-5xl sm:text-7xl text-black drop-shadow-lg mb-6">Hey Rima ❤️</h1>
+        <p class="text-lg sm:text-xl text-black/90 max-w-xl mx-auto mb-8">Today is not just another day. It is the day my absolute favorite person came into this world.</p>
+        <button onclick="nextStep()" class="bg-white text-pink-600 px-8 py-4 rounded-full font-bold shadow-xl hover:scale-105 active:scale-95 transition">Open Your Surprise 💝</button>
+      </section>
+
+      <!-- STEP 1 -->
+      <section class="step w-full" data-step="1">
+        <p class="uppercase tracking-[.35em] text-sm text-black mb-2">From My Heart To Yours</p>
+        <h2 class="font-love text-4xl sm:text-6xl text-black mb-6">Happy Birthday, Rima Islam! 🎉</h2>
+        <div class="bg-white/30 backdrop-blur-md rounded-3xl p-6 sm:p-8 text-left border border-white/40 shadow-inner max-w-2xl mx-auto mb-8 max-h-[320px] overflow-y-auto">
+          <p id="letterText" class="text-base sm:text-lg leading-relaxed text-black/90 font-medium"></p>
+        </div>
+        <button onclick="nextStep()" class="bg-white text-pink-600 px-8 py-4 rounded-full font-bold shadow-xl hover:scale-105 active:scale-95 transition">Continue Magic ✨</button>
+      </section>
+
+      <!-- STEP 2 -->
+      <section class="step w-full" data-step="2">
+        <h2 class="font-love text-4xl sm:text-6xl mb-7 uppercase">A Special Gift</h2>
+        <p class="mb-10 text-black/90">Tap the gift box gently.</p>
+        <div class="gift-box" onclick="openGift(this)">
+          <div class="gift-lid"></div>
+        </div>
+        <p id="giftMessage" class="hidden mt-10 text-2xl font-semibold text-black">Inside this gift is all my love, endless prayers, and a promise to always make you smile. 🥺❤️</p>
+      </section>
+
+      <!-- STEP 3 -->
+      <section class="step w-full" data-step="3">
+        <div class="cake mb-8">
+          <div class="flame" id="flame"></div>
+          <div class="candle"></div>
+          <div class="cake-top"></div>
+          <div class="cake-base"></div>
+        </div>
+        <p class="mb-6 text-black/90">Make a wish and click the flame to blow it out.</p>
+        <button onclick="blowCandle()" class="bg-pink-600 hover:bg-pink-700 text-white px-8 py-4 rounded-full font-bold shadow-xl transition">Blow Candle 🕯️</button>
+      </section>
+
+      <!-- STEP 4: DEEP NOTES -->
+      <section class="step w-full" data-step="4">
+        <p class="uppercase tracking-[.35em] text-sm text-black mb-2">Notes From My Heart</p>
+        <h2 class="font-love text-4xl sm:text-5xl text-black mb-2">For You, Rima Islam 💌</h2>
+        <p class="mb-5 text-black/80 text-sm">Tap each note to read what my heart wants you to know.</p>
+        <div class="notes-scroll max-w-2xl mx-auto space-y-3 mb-6">
+          <div class="note-card" onclick="this.classList.toggle('open')">
+            <div class="note-title"><span>💞 What you are to me</span><span class="note-chevron">⌄</span></div>
+            <div class="note-body">You are not just the person I love, Rima. You are the person my heart feels at home with. In a loud and restless world, you are my quiet place, the one where I can finally breathe and just be myself.</div>
+          </div>
+          <div class="note-card" onclick="this.classList.toggle('open')">
+            <div class="note-title"><span>🌙 On my hard days</span><span class="note-chevron">⌄</span></div>
+            <div class="note-body">You may never know how many heavy days you carried with me without knowing it. One message, one smile, one “I’m here” from you was enough to make the darkness feel smaller. You are my strength when I have none left.</div>
+          </div>
+          <div class="note-card" onclick="this.classList.toggle('open')">
+            <div class="note-title"><span>🤝 What we really have</span><span class="note-chevron">⌄</span></div>
+            <div class="note-body">What we share is deeper than words like love or care. It is trust. It is being understood without explaining, being forgiven without asking, and being chosen again and again, even on the days I am hard to love.</div>
+          </div>
+          <div class="note-card" onclick="this.classList.toggle('open')">
+            <div class="note-title"><span>🌱 How you changed me</span><span class="note-chevron">⌄</span></div>
+            <div class="note-body">Since you came into my life, I became softer, more patient, more grateful. You taught me that love is not only a feeling but a promise: to show up, to stay, and to grow together.</div>
+          </div>
+          <div class="note-card" onclick="this.classList.toggle('open')">
+            <div class="note-title"><span>🤲 My prayer for you</span><span class="note-chevron">⌄</span></div>
+            <div class="note-body">May Allah protect your smile, ease every worry in your heart, and write for you a life even more beautiful than your dreams. And if He wills, may I always be one of the reasons you smile.</div>
+          </div>
+          <div class="note-card" onclick="this.classList.toggle('open')">
+            <div class="note-title"><span>♾️ My promise</span><span class="note-chevron">⌄</span></div>
+            <div class="note-body">I may not promise a perfect life, but I promise this: I will hold your hand through storms and sunshine, respect your heart, and love you quietly and loudly, today, tomorrow, and for all the days Allah gives us.</div>
+          </div>
+        </div>
+        <button onclick="nextStep()" class="bg-white text-pink-600 px-8 py-4 rounded-full font-bold shadow-xl hover:scale-105 active:scale-95 transition">One Last Surprise 💖</button>
+      </section>
+
+      <!-- STEP 5 -->
+      <section class="step w-full" data-step="5">
+        <p class="uppercase tracking-[.35em] text-sm text-pink-100 mb-4">Forever & Always</p>
+        <h2 class="font-love text-5xl sm:text-7xl mb-6">Happy Birthday Rima Islam 🎂</h2>
+        <div class="max-w-2xl mx-auto text-left bg-white/20 rounded-3xl p-6 border border-white/25">
+          <p class="text-lg leading-8 text-black/95">
+            Rima, you are the sweetest, most beautiful blessing in my life. Your smile brightens my hardest days, and your love gives me a sense of peace I never knew before.
+          </p>
+          <p class="text-lg leading-8 text-black/95 mt-4">
+            May Allah fill your year with endless joy, success, health, and every silent wish in your heart. I am so grateful to have you. ❤️
+          </p>
+          <p class="text-lg leading-8 text-black/95 mt-4 font-semibold">
+            Happy Birthday, Rima Islam. You are my today, my tomorrow, and my always. 💞
+          </p>
+        </div>
+        <button onclick="restartWish()" class="mt-8 bg-white text-pink-600 px-8 py-4 rounded-full font-bold shadow-xl hover:scale-105 active:scale-95 transition">Replay Magic ✨</button>
+      </section>
+
+    </div>
+  </main>
+
+  <script>
+    let currentStep = 0;
+    const steps = document.querySelectorAll('.step');
+
+    const fullLetter = `My dearest Rima, I hope today brings you as much warmth, peace, and sweet laughter as you bring into my life every single day. Having you by my side is the greatest gift I could ever ask for—you have this gentle way of making my whole world brighter just by being yourself.\n\nMay this year bring you endless reasons to smile, unforgettable moments, and every blessing your beautiful heart desires. Thank you for being my comfort, my joy, and my favorite person in the entire world.\n\nEnjoy every single second of your special day. You deserve all the love in the world and so much more. 💕🎂✨`;
+
+    let charIndex = 0;
+    function typeLetter() {
+      const target = document.getElementById('letterText');
+      if (charIndex < fullLetter.length) {
+        if (fullLetter.charAt(charIndex) === '\n') {
+          target.innerHTML += '<br>';
+        } else {
+          target.innerHTML += fullLetter.charAt(charIndex);
+        }
+        charIndex++;
+        setTimeout(typeLetter, 20);
+      }
+    }
+
+    function showStep(index) {
+      steps.forEach(step => step.classList.remove('active'));
+      steps[index].classList.add('active');
+      currentStep = index;
+
+      if (index === 1 && charIndex === 0) {
+        typeLetter();
+      }
+      if (index === 5) {
+        launchConfetti();
+      }
+    }
+
+    function nextStep() {
+      showStep(currentStep + 1);
+    }
+
+    function createFloatingHearts() {
+      setInterval(() => {
+        const heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.innerHTML = ['❤️','💖','💕','💗','💘'][Math.floor(Math.random() * 5)];
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.fontSize = (18 + Math.random() * 28) + 'px';
+        heart.style.animationDuration = (4 + Math.random() * 4) + 's';
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 8000);
+      }, 350);
+    }
+
+    function createSparkles() {
+      for (let i = 0; i < 35; i++) {
+        const sp = document.createElement('div');
+        sp.className = 'sparkle';
+        sp.style.left = Math.random() * 100 + 'vw';
+        sp.style.top = Math.random() * 100 + 'vh';
+        sp.style.animationDelay = Math.random() * 3 + 's';
+        document.body.appendChild(sp);
+      }
+    }
+
+    function openGift(box) {
+      box.classList.add('open');
+      document.getElementById('giftMessage').classList.remove('hidden');
+      launchConfetti(50);
+      setTimeout(() => showStep(3), 2500);
+    }
+
+    function blowCandle() {
+      document.getElementById('flame').style.display = 'none';
+      launchConfetti(120);
+      setTimeout(() => showStep(4), 1200);
+    }
+
+    function launchConfetti(amount = 100) {
+      const colors = ['#ff4d94', '#fff176', '#7c4dff', '#00e5ff', '#ffffff', '#ff1744'];
+      for (let i = 0; i < amount; i++) {
+        const c = document.createElement('div');
+        c.className = 'confetti';
+        c.style.left = Math.random() * 100 + 'vw';
+        c.style.background = colors[Math.floor(Math.random() * colors.length)];
+        c.style.animationDelay = Math.random() * 1.2 + 's';
+        c.style.animationDuration = (2 + Math.random() * 2.5) + 's';
+        document.body.appendChild(c);
+        setTimeout(() => c.remove(), 4500);
+      }
+    }
+
+    function restartWish() {
+      charIndex = 0;
+      document.getElementById('letterText').innerHTML = '';
+      document.getElementById('flame').style.display = 'block';
+      document.getElementById('giftMessage').classList.add('hidden');
+      document.querySelector('.gift-box').classList.remove('open');
+      document.querySelectorAll('.note-card').forEach(c => c.classList.remove('open'));
+      showStep(0);
+    }
+
+    createFloatingHearts();
+    createSparkles();
+  </script>
+</body>
+</html>
